@@ -30,6 +30,7 @@ class SampleControllerTest {
 
     @Test
     void hello() throws Exception {
+        //htmlunit 의존성 추가
         HtmlPage page = webClient.getPage("/hello");
         HtmlHeading1 h1 = page.getFirstByXPath("//h1");
         assertThat(h1.getTextContent()).isEqualToIgnoringCase("daeho");
